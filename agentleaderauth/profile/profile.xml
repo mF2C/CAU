@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<CertEnrollmentRequest>
+
+    <Attributes/>
+
+    <ProfileID>caServerCert</ProfileID>
+
+    <Renewal>false</Renewal>
+
+    <RemoteHost></RemoteHost>
+
+    <RemoteAddress></RemoteAddress>
+
+    <Input id="i1">
+
+        <ClassID>certReqInputImpl</ClassID>
+
+        <Name>Certificate Request Input</Name>
+
+        <Attribute name="cert_request_type">
+
+            <Value>pkcs10</Value>
+
+            <Descriptor>
+
+                <Syntax>cert_request_type</Syntax>
+
+                <Description>Certificate Request Type</Description>
+
+            </Descriptor>
+
+        </Attribute>
+
+        <Attribute name="cert_request">
+
+            <Value>
+
+                -----BEGIN CERTIFICATE REQUEST-----
+
+                MIICqjCCAZICAQAwZTESMBAGA1UEAwwJMTI3LjAuMC4xMQ0wCwYDVQQLDARTVEZD
+
+                MQ0wCwYDVQQKDARNRjJDMREwDwYDVQQHDAhDYWdsaWFyaTERMA8GA1UECAwIU2Fy
+
+                ZGVnbmExCzAJBgNVBAYTAklUMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+
+                … and so on.
+
+                qVz6l877HfbRbWD8ArPDgWd26CFWSeAmdAdMlqxbv57b1CyDQmbHCOShTZM3UCnu
+
+                KLaP3U3z+dFovSVXOIGlWZCC/yLNtgOXLbs1/NFO7NwMoSE0ejK++wBDkm/VA5rv
+
+                6u32KceC4sN9ZZFcDys=
+
+                -----END CERTIFICATE REQUEST-----
+
+            </Value>
+
+            <Descriptor>
+
+                <Syntax>cert_request</Syntax>
+
+                <Description>Certificate Request</Description>
+
+            </Descriptor>
+
+        </Attribute>
+
+    </Input>
+
+    <Input id="i2">
+
+        <ClassID>submitterInfoInputImpl</ClassID>
+
+        <Name>Requestor Information</Name>
+
+        <Attribute name="cau-device">
+
+            <Value></Value>
+
+            <Descriptor>
+
+                <Syntax>string</Syntax>
+
+                <Description>cau</Description>
+
+            </Descriptor>
+
+        </Attribute>
+
+        <Attribute name="requestor_email">
+
+            <Value></Value>
+
+            <Descriptor>
+
+                <Syntax>string</Syntax>
+
+                <Description>test@test</Description>
+
+            </Descriptor>
+
+        </Attribute>
+
+        <Attribute name="requestor_phone">
+
+            <Value></Value>
+
+            <Descriptor>
+
+                <Syntax>string</Syntax>
+
+                <Description>test</Description>
+
+            </Descriptor>
+
+        </Attribute>
+
+    </Input>
+
+</CertEnrollmentRequest>
