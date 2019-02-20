@@ -1,0 +1,8 @@
+version: '3'
+services:
+  agentleaderauth:
+    build: agentleaderauth
+    container_name: agentleaderauth
+    ports:
+      - "46400:46400"
+      - "46401:46401"
