@@ -35,8 +35,8 @@ class Server:
         self.sslSocket.listen(50)
         global leaderH
         leaderH = None
-        try:
-            while True:
+        while True:
+            try:
                 client, address = self.sslSocket.accept()
                 self.debug('Accepted connection from {}:{}'.format(address[0], address[1]))
                 if self._control:
@@ -48,10 +48,10 @@ class Server:
                     client_handler_thread = Thread(target=self._client_handler, args=(client, address, leaderH,),
                                                              daemon=True)
                     client_handler_thread.start()
-        except KeyboardInterrupt:
-            exit(0)
-        except:
-            pass
+            except KeyboardInterrupt:
+                exit(0)
+            except:
+                pass
 
     def _client_handler(self, client, address, leader):
         while True:
