@@ -58,7 +58,7 @@ class Server:
                 self.debug('send back cert to client')
                 if cert is not None and cert != "":
                     client.send(cert)
-                    leader.send(self.obtainParameters(payload))
+                    #leader.send(self.obtainParameters(payload))
                     client.close()
                     return 0
             else:

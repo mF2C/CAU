@@ -6,3 +6,4 @@ services:
     ports:
       - "46400:46400"
       - "46401:46401"
+    restart: on-failure

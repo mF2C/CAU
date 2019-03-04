@@ -26,7 +26,7 @@ class Client:
                                                 'POST', headers={'content-type': 'text/plain', 'accept': 'text/plain'},
                                                 body=csr)
         print("Response from CA: " + str(response) + " || content: " + content.decode())
-        return str(content).encode('utf-8')
+        return content
 
     @staticmethod
     def debug(text):
